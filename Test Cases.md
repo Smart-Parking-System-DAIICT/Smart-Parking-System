@@ -142,29 +142,3 @@ Use the cases for manual testing, or convert them into automated tests (JUnit + 
 
 ---
 
-## Execution & Evidence
-
-* **Automation:** Convert each case into JUnit 5 + Mockito tests and add to CI (GitHub Actions) to run on PRs.
-* **Manual testing:** Execute steps against staging environment; capture screenshots or logs.
-* **Evidence:** For each TC, attach test-run logs, screenshots, or DB query results showing state changes.
-
----
-
-## Checklist for PR / Instructor Review
-
-* [ ] All TC-01..TC-09 executed.
-* [ ] Acceptance criteria passed for each case (or documented exceptions).
-* [ ] Test evidence attached (screenshots, logs, CI test results).
-* [ ] PR created referencing this file and tests implemented (if automated).
-
----
-
-## Notes & Adaptation Guidance
-
-* If your project returns `Optional` instead of `null`, update expected outcomes accordingly.
-* If slot lookup or repository method names differ, the behavior expectations remain the same; only the call names change.
-* For concurrency tests use DB-level locking or simulate in test by controlling mocked behavior.
-
----
-
-*Prepared for Trade\_up / Smart Parking — add to repo and link in your PR.*

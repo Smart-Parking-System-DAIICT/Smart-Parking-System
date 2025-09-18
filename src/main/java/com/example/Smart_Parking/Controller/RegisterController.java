@@ -39,7 +39,7 @@ public class RegisterController {
             return "Register";
         }
 
-        boolean registered = userService.register(userForm, null);
+        boolean registered = userService.register(userForm);
         if (!registered) {
             model.addAttribute("error", "Email already exists.");
             return "Register";

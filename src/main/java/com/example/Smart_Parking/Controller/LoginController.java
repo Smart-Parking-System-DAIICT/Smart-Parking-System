@@ -19,7 +19,7 @@ public class LoginController {
 
     @GetMapping("/")
     public String root() {
-        return "redirect:/Userlogin";
+        return "redirect:/Home";
     }
 
     @GetMapping("/Userlogin")
@@ -37,7 +37,7 @@ public class LoginController {
         // 2) if present, stash the actual User in session
         if (maybeUser.isPresent()) {
             User user = maybeUser.get();
-            session.setAttribute("user", user);
+            session.setAttribute("loggedUser", user);
             return "redirect:/Home";
         }
 

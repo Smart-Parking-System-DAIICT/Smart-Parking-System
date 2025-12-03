@@ -25,7 +25,7 @@ public class UserService {
 
     public boolean register(User user) {
         if (repo.findByEmail(user.getEmail()).isPresent()){
-            return false;
+            return false; // Username or Email taken
         }
 
         String hashedPassword = passwordEncoder.encode(user.getPassword());

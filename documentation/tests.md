@@ -11,7 +11,6 @@ All tests validate business logic, service correctness, reservation rules, and c
 | ReserveServiceTest       | 2                | 2          | 0          | ~150 ms             |
 | PaymentServiceTest       | 2                | 2          | 0          | ~387 ms             |
 | FeedbackServiceTest      | 1                | 1          | 0          | ~45 ms              |
-| SlotControllerTest       | 2                | 2          | 0          | ~110 ms             |
 
 ✔ Total Tests: 14 <br>
 ✔ All Passed Successfully <br>
@@ -91,20 +90,6 @@ Type of Testing
 
 ✅ 1/1 tests passed <br>
 ⏱ Execution Time: ~45 ms
-
-## 7. SlotController Tests (SlotControllerTest.java)
-### Type of Testing
-- Controller Method Testing
-- Logic Branching Based on Parameters
-
-### Features Covered
-| **Test Case**                                      | **Description**                                   |
-|----------------------------------------------------|---------------------------------------------------|
-| viewSlots_whenNoParams_callsGetAllSlots            | Calls default service method when filters absent  |
-| viewSlots_whenParamsProvided_callsGetAvailableSlots| Correct service logic for date/time filters       |
-
-✅ All 2 tests passed <br>
-⏱ Execution Time: ~110 ms
 
 # ✔️ Final Summary
 

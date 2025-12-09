@@ -12,7 +12,7 @@ All tests validate business logic, service correctness, reservation rules, and c
 | PaymentServiceTest       | 2                | 2          | 0          | ~387 ms             |
 | FeedbackServiceTest      | 1                | 1          | 0          | ~45 ms              |
 
-✔ Total Tests: 14 <br>
+✔ Total Tests: 12 <br>
 ✔ All Passed Successfully <br>
 ⏱ Overall Execution Time: ~1.8 seconds <br>
 
@@ -93,7 +93,7 @@ Type of Testing
 
 # ✔️ Final Summary
 
-- All 14 automated tests passed successfully
+- All 12 automated tests passed successfully
 - No failures, no flaky tests
 - High confidence in:
 - Slot availability logic

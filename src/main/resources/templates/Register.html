@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <title>Register</title>
@@ -75,7 +76,7 @@
 
         .password-wrapper input {
             width: 100%;
-            padding-right: 2.5rem;
+            padding-right: 2.5rem; /* space for icon */
         }
 
         .toggle-password {
@@ -168,6 +169,7 @@
     </style>
 </head>
 <body>
+
 <div class="register-container">
     <h2>Register</h2>
     <form th:action="@{/register}" th:object="${userForm}" method="post">
@@ -175,6 +177,12 @@
             <label for="username" class="required">Username</label>
             <input id="username" type="text" th:field="*{username}" placeholder="Enter your username" required />
             <div th:if="${#fields.hasErrors('username')}" th:errors="*{username}" class="error"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="email" class="required">Email</label>
+            <input id="email" type="email" th:field="*{email}" placeholder="Enter your email" required />
+            <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></div>
         </div>
 
         <div class="form-group">
@@ -192,12 +200,6 @@
                 </svg>
             </button>
             <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error"></div>
-        </div>
-
-        <div class="form-group">
-            <label for="email" class="required">Email</label>
-            <input id="email" type="email" th:field="*{email}" placeholder="Enter your email" required />
-            <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></div>
         </div>
 
         <div class="form-group">

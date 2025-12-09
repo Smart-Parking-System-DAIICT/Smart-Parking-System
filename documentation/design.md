@@ -6,9 +6,9 @@ Earlier, the controller methods contained mixed logic, validations, and DB opera
 ## Improvements:
 
 - Clearly separated logic into:
-- Controllers → Handle HTTP requests
-- Services → Business logic (slot checking, payments, etc.)
-- Repositories → Database interactions
+   - Controllers → Handle HTTP requests
+   - Services → Business logic (slot checking, payments, etc.)
+   - Repositories → Database interactions
 - Reduced duplicate logic in multiple controllers
 - Improved readability and code navigation
 

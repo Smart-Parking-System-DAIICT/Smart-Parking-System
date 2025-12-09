@@ -15,12 +15,15 @@ CSS3
 JavaScript
 Bootstrap (for responsive UI)
 ```
-### 🔥 **Backend / Services**
+### 🔥 **Backend**
 ```
 Java 17
 Spring Boot
 Spring MVC
 Spring Data JPA
+```
+### ⚙ **Database**
+```
 MySQL Database
 ```
 ### 🎯 **Features**

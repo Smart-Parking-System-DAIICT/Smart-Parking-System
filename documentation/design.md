@@ -83,7 +83,6 @@ The initial authentication approach lacked verification handling.
 ## Improvements:
 
 - Integrated Spring Security password encoding
-- Added emailVerified flag to user model
 - Improved login validation
 - Added safety checks inside UserService
 
@@ -153,19 +152,6 @@ The UI reflects new data automatically.
 
 Dynamic system behavior with minimal coupling
 
-## ✅ 2.4 Factory Pattern (via Mockito in Testing)
-Tests generate fake objects using mocks:
-when(repo.findById(1L)).thenReturn(Optional.of(mockUser));
-
-Mock objects act like factories:
-- Fake users
-- Fake slots
-- Fake payments
-
-✅ Result:
-
-Predictable, isolated, and controlled test environments
-
 ### 3. Key Refactoring Done to Improve Design
 ## ✅ 3.1 Refactored Slot Availability Calculation
 
@@ -183,7 +169,6 @@ Cleaner controllers + consistent availability
 ## ✅ 3.2 Improved User & Authentication Flow
 
 ### Updates include:
-- Email verification logic
 - Encoded passwords
 - User lookup improvements
 - Safer null checks

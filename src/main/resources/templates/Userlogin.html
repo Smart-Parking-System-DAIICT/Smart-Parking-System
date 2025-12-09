@@ -50,12 +50,14 @@
             color: #e0ffff;
         }
 
+        /* red asterisk */
         .form-group label.required::after {
             content: " *";
             color: #ff4c4c;
             font-weight: bold;
         }
 
+        /* Generic input style */
         input {
             width:100%;
             padding:0.6rem 3rem 0.6rem 0.6rem;
@@ -80,7 +82,7 @@
 
         .password-wrapper input {
             width: 100%;
-            padding-right: 2.5rem;
+            padding-right: 2.5rem; /* space for icon */
         }
 
         .toggle-password {
@@ -145,8 +147,10 @@
         .register-link a { color: #ffffff; text-decoration: none; font-weight: bold; }
         .register-link a:hover { text-decoration: underline; }
 
-        @media (max-width: 420px) {
-            .login-container { width: 92%; padding: 2rem; }
+       @media (max-width:500px) {
+            .login-container {
+                padding:2rem 1.5rem;
+            }
         }
     </style>
 </head>
@@ -204,6 +208,7 @@
             const hidden = pwd.type === 'password';
             pwd.type = hidden ? 'text' : 'password';
 
+            // show correct SVG
             eye.style.display = hidden ? 'none' : 'inline-block';
             eyeSlash.style.display = hidden ? 'inline-block' : 'none';
 
@@ -211,6 +216,7 @@
             pwd.focus();
         });
 
+        // keyboard support for accessibility
         toggleBtn.addEventListener('keydown', function (e) {
             if (e.key === ' ' || e.key === 'Enter') {
                 e.preventDefault();
